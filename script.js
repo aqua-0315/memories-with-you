@@ -63,3 +63,24 @@ galleryPhotos.forEach((photo) => {
 imageModal.addEventListener("click", () => {
   imageModal.classList.remove("active");
 });
+
+// ===== スライドショー自動再生 =====
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+let currentSlide = 0;
+
+function showNextSlide() {
+  // 現在の写真・丸印から active クラスを外す
+  slides[currentSlide].classList.remove("active");
+  dots[currentSlide].classList.remove("active");
+
+  // 次の写真の番号を計算（最後まで行ったら最初に戻る）
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  // 次の写真・丸印に active クラスを付ける
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}
+
+// 3秒ごとに showNextSlide を実行
+setInterval(showNextSlide, 3000);

@@ -318,3 +318,80 @@ body {
   color: #4B1528;
   font-weight: bold;
 }
+/* ===== ラストメッセージ ===== */
+#message {
+  padding: 60px 20px;
+}
+
+.message-card {
+  background-color: #FAECE7;
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+
+.message-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #712B13;
+  margin-bottom: 20px;
+}
+
+.message-body {
+  font-size: 15px;
+  color: #5A4A42;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.message-signature {
+  font-size: 14px;
+  color: #712B13;
+  text-align: right;
+}
+
+/* ===== スライドショー ===== */
+#slideshow {
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slideshow-dots {
+  margin-top: 16px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #F4C0D1;
+  margin: 0 4px;
+  transition: background-color 0.5s ease;
+}
+
+.dot.active {
+  background-color: #D4537E;
+}
