@@ -111,14 +111,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.00);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 1;
 }
 
 .hero-text {
   position: relative;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 2;
 }
 
@@ -140,14 +140,15 @@ body {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   z-index: 2;
   animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(-50%, 0);
   }
   50% {
@@ -164,7 +165,7 @@ body {
 }
 
 .anniversary-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 16px;
   padding: 24px 16px;
   text-align: center;
@@ -182,5 +183,138 @@ body {
 .anniversary-number {
   font-size: 24px;
   font-weight: bold;
+  color: #4b1528;
+}
+
+/* ===== 思い出ギャラリー ===== */
+#gallery {
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b1528;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: 16px;
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b1528;
+  margin: 16px 16px 4px;
+}
+
+.gallery-card-comment {
+  font-size: 14px;
+  color: #5a4a42;
+  margin: 0 16px 8px;
+}
+
+.gallery-card-date {
+  font-size: 12px;
+  color: #993556;
+  margin: 0 16px;
+}
+
+/* ===== 画像拡大モーダル ===== */
+#image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+#image-modal.active {
+  display: flex;
+}
+
+#modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.gallery-photo {
+  cursor: pointer;
+}
+
+/* ===== 思い出タイムライン ===== */
+#timeline {
+  padding: 40px 20px;
+  background-color: #FFFFFF;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 2px;
+  background-color: #F4C0D1;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 6px;
+  left: -24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #D4537E;
+}
+
+.timeline-date {
+  font-size: 12px;
+  color: #993556;
+  margin-bottom: 4px;
+}
+
+.timeline-text {
+  font-size: 15px;
   color: #4B1528;
+  font-weight: bold;
 }

@@ -45,3 +45,21 @@ function getDaysDiff(startDate, endDate) {
 // 計算結果をHTMLに反映
 document.getElementById("days-since-met").textContent = getDaysDiff(metDate, today);
 document.getElementById("days-since-dating").textContent = getDaysDiff(datingDate, today);
+
+// ===== 画像拡大表示（モーダル） =====
+const galleryPhotos = document.querySelectorAll(".gallery-photo");
+const imageModal = document.getElementById("image-modal");
+const modalImage = document.getElementById("modal-image");
+
+// 各ギャラリー写真にクリックイベントを設定
+galleryPhotos.forEach((photo) => {
+  photo.addEventListener("click", () => {
+    modalImage.src = photo.src;       // タップした写真の画像をモーダルにセット
+    imageModal.classList.add("active"); // モーダルを表示
+  });
+});
+
+// モーダルをタップしたら閉じる
+imageModal.addEventListener("click", () => {
+  imageModal.classList.remove("active");
+});
