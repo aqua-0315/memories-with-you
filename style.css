@@ -1,0 +1,84 @@
+/* ===== 全体の基本設定 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background-color: #faf6f2;
+  color: #5a4a42;
+  line-height: 1.7;
+}
+
+/* ===== パスワード画面 ===== */
+#password-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbeaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 1s ease;
+}
+
+.password-box {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 80%;
+  max-width: 320px;
+}
+
+.password-label {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4b1528;
+  margin-bottom: 8px;
+}
+
+.password-message {
+  font-size: 14px;
+  color: #993556;
+  margin-bottom: 24px;
+}
+
+#password-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f4c0d1;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#password-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4537e;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#password-error {
+  display: none;
+  color: #d4537e;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* ===== フェードアウト演出 ===== */
+#password-screen.fade-out {
+  opacity: 0;
+}
