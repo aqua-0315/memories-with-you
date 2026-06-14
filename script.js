@@ -1,5 +1,5 @@
 // ===== パスワード設定 =====
-const correctPassword = "0700"; // ここに彼女の誕生日（4桁）を入力
+const correctPassword = "0712"; // ここに彼女の誕生日（4桁）を入力
 
 // ===== 要素の取得 =====
 const passwordScreen = document.getElementById("password-screen");
@@ -70,14 +70,11 @@ const dots = document.querySelectorAll(".dot");
 let currentSlide = 0;
 
 function showNextSlide() {
-  // 現在の写真・丸印から active クラスを外す
   slides[currentSlide].classList.remove("active");
   dots[currentSlide].classList.remove("active");
 
-  // 次の写真の番号を計算（最後まで行ったら最初に戻る）
   currentSlide = (currentSlide + 1) % slides.length;
 
-  // 次の写真・丸印に active クラスを付ける
   slides[currentSlide].classList.add("active");
   dots[currentSlide].classList.add("active");
 }
