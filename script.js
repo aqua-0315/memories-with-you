@@ -100,3 +100,27 @@ const observer = new IntersectionObserver((entries) => {
 fadeSections.forEach((section) => {
   observer.observe(section);
 });
+
+// ===== ローディング画面（誕生日のみ表示） =====
+const loadingScreen = document.getElementById("loading-screen");
+
+// 今日の日付を取得
+const todayMonth = new Date().getMonth() + 1; // 月（1〜12）
+const todayDay = new Date().getDate();         // 日（1〜31）
+
+// 彼女の誕生日を設定（月・日）
+const birthdayMonth = 6;  // ← 誕生日の月に変更
+const birthdayDay = 15;   // ← 誕生日の日に変更
+
+if (todayMonth === birthdayMonth && todayDay === birthdayDay) {
+  // 誕生日の場合：ローディング画面を表示
+  setTimeout(() => {
+    loadingScreen.classList.add("fade-out");
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+    }, 1000);
+  }, 2500);
+} else {
+  // 誕生日以外：ローディング画面を即座に非表示
+  loadingScreen.style.display = "none";
+}

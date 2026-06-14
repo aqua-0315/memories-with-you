@@ -407,3 +407,57 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== ローディング画面 ===== */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FBEAF0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  transition: opacity 1s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+}
+
+.loading-heart {
+  font-size: 48px;
+  color: #D4537E;
+  animation: heartbeat 1.2s ease infinite;
+  margin-bottom: 16px;
+}
+
+.loading-text {
+  font-size: 20px;
+  color: #4B1528;
+  letter-spacing: 3px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
