@@ -81,3 +81,22 @@ function showNextSlide() {
 
 // 3秒ごとに showNextSlide を実行
 setInterval(showNextSlide, 3000);
+
+// ===== スクロールアニメーション =====
+const fadeSections = document.querySelectorAll(".fade-in-section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // 画面内に入ったら visible クラスを追加
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.1  // 要素が10%見えたらアニメーション開始
+});
+
+// 各セクションを監視対象に登録
+fadeSections.forEach((section) => {
+  observer.observe(section);
+});
