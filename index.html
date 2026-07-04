@@ -8,10 +8,10 @@
   </head>
   <body>
     <!-- ローディング画面 -->
-  <div id="loading-screen">
-    <p class="loading-heart">♡</p>
-    <p class="loading-text">Happy Birthday</p>
-  </div>
+    <div id="loading-screen">
+      <p class="loading-heart">♡</p>
+      <p class="loading-text">Happy Birthday</p>
+    </div>
     <!-- パスワード画面 -->
     <div id="password-screen">
       <div class="password-box">
@@ -55,43 +55,181 @@
         </div>
       </section>
 
-<!-- 思い出ギャラリー -->
-    <section id="gallery">
-      <h2 class="section-title">思い出ギャラリー</h2>
+      <!-- 思い出ギャラリー -->
+      <section id="gallery">
+        <h2 class="section-title">思い出ギャラリー</h2>
 
-      <div class="gallery-grid">
+        <div class="gallery-grid">
+          <!-- 1日目 -->
+          <div class="gallery-card">
+            <p class="gallery-card-date">2026.05.24</p>
+            <p class="gallery-card-title">初めて行った場所</p>
+            <p class="gallery-card-comment">
+              ハンバーグがおいしかった<br />
+              最初はうまく話せなかったけれど、沈黙は苦じゃなかったね<br />
+              気が付けば5時間も一緒にいて、あっという間の時間だった
+            </p>
+            <div class="gallery-slider">
+              <img
+                src="images/day1-1.jpg"
+                alt="1日目の写真1"
+                class="gallery-slide active"
+              />
+              <img
+                src="images/day1-2.jpg"
+                alt="1日目の写真2"
+                class="gallery-slide"
+              />
+              <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
+              <button class="gallery-arrow gallery-arrow-right">
+                &#10095;
+              </button>
+              <div class="gallery-dots">
+                <span class="gallery-dot active"></span>
+                <span class="gallery-dot"></span>
+              </div>
+            </div>
+          </div>
 
-        <!-- カード1：写真2枚 -->
-        <div class="gallery-card">
-          <p class="gallery-card-date">2026.05.24</p>
-          <p class="gallery-card-title">初めて行った場所</p>
-          <p class="gallery-card-comment">この日はすごく楽しかったね</p>
+          <!-- 2日目 -->
+          <div class="gallery-card">
+            <p class="gallery-card-date">2026.06.06</p>
+            <p class="gallery-card-title">居酒屋</p>
+            <p class="gallery-card-comment">
+              初めて飲みに行ったね<br />
+              注文頼みすぎて、お腹きつかった笑
+            </p>
+            <div class="gallery-slider">
+              <img
+                src="images/day2-1.jpg"
+                alt="2日目の写真1"
+                class="gallery-slide active"
+              />
+            </div>
+          </div>
 
-          <div class="gallery-slider">
-            <img src="images/day1-1.jpg" alt="1日目の写真1" class="gallery-slide active">
-            <img src="images/day1-2.jpg" alt="1日目の写真2" class="gallery-slide">
-            <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
-            <button class="gallery-arrow gallery-arrow-right">&#10095;</button>
-            <div class="gallery-dots">
-              <span class="gallery-dot active"></span>
-              <span class="gallery-dot"></span>
+          <!-- 3日目 -->
+          <div class="gallery-card">
+            <p class="gallery-card-date">2026.06.06</p>
+            <p class="gallery-card-title">AOAO札幌</p>
+            <p class="gallery-card-comment">
+              水族館で魚を見たね<br />
+              そのあとの焼肉もおいしかった<br />
+              この日に付き合うことになったね
+            </p>
+            <div class="gallery-slider">
+              <img
+                src="images/day3-1.jpg"
+                alt="3日目の写真1"
+                class="gallery-slide active"
+              />
+              <img
+                src="images/day3-2.jpg"
+                alt="3日目の写真2"
+                class="gallery-slide"
+              />
+              <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
+              <button class="gallery-arrow gallery-arrow-right">
+                &#10095;
+              </button>
+              <div class="gallery-dots">
+                <span class="gallery-dot active"></span>
+                <span class="gallery-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4日目 -->
+          <div class="gallery-card">
+            <p class="gallery-card-date">2026.06.14</p>
+            <p class="gallery-card-title">小樽</p>
+            <p class="gallery-card-comment">
+              jrで小樽まで行ったね<br />
+              このときにはじめて手を繋いだね
+            </p>
+            <div class="gallery-slider">
+              <img
+                src="images/day4-1.jpg"
+                alt="4日目の写真1"
+                class="gallery-slide active"
+              />
+              <img
+                src="images/day4-2.jpg"
+                alt="4日目の写真2"
+                class="gallery-slide"
+              />
+              <img
+                src="images/day4-3.jpg"
+                alt="4日目の写真3"
+                class="gallery-slide"
+              />
+              <img
+                src="images/day4-4.jpg"
+                alt="4日目の写真4"
+                class="gallery-slide"
+              />
+              <img
+                src="images/day4-5.jpg"
+                alt="4日目の写真5"
+                class="gallery-slide"
+              />
+              <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
+              <button class="gallery-arrow gallery-arrow-right">
+                &#10095;
+              </button>
+              <div class="gallery-dots">
+                <span class="gallery-dot active"></span>
+                <span class="gallery-dot"></span>
+                <span class="gallery-dot"></span>
+                <span class="gallery-dot"></span>
+                <span class="gallery-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5日目 -->
+          <div class="gallery-card">
+            <p class="gallery-card-date">2026.06.28</p>
+            <p class="gallery-card-title">サンピアザ水族館</p>
+            <p class="gallery-card-comment">
+              いろんな魚いて楽しかった<br />
+              カレー屋さんもとってもおいしかったね
+            </p>
+            <div class="gallery-slider">
+              <img
+                src="images/day5-1.jpg"
+                alt="5日目の写真1"
+                class="gallery-slide active"
+              />
+              <img
+                src="images/day5-2.jpg"
+                alt="5日目の写真2"
+                class="gallery-slide"
+              />
+              <img
+                src="images/day5-3.jpg"
+                alt="5日目の写真3"
+                class="gallery-slide"
+              />
+              <img
+                src="images/day5-4.jpg"
+                alt="5日目の写真4"
+                class="gallery-slide"
+              />
+              <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
+              <button class="gallery-arrow gallery-arrow-right">
+                &#10095;
+              </button>
+              <div class="gallery-dots">
+                <span class="gallery-dot active"></span>
+                <span class="gallery-dot"></span>
+                <span class="gallery-dot"></span>
+                <span class="gallery-dot"></span>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- カード2：写真1枚 -->
-        <div class="gallery-card">
-          <p class="gallery-card-date">2026.06.06</p>
-          <p class="gallery-card-title">2回目のデート</p>
-          <p class="gallery-card-comment">天気が良くて気持ちよかったね</p>
-
-          <div class="gallery-slider">
-            <img src="images/day2-1.jpg" alt="2日目の写真1" class="gallery-slide active">
-          </div>
-        </div>
-
-      </div>
-    </section>
+      </section>
 
       <!-- 思い出タイムライン -->
       <section id="timeline" class="fade-in-section">
@@ -128,37 +266,14 @@
         <div class="message-card">
           <p class="message-title">もかへ</p>
           <p class="message-body">
-            いつも近くにいてくれてありがとう。<br /><br />
-            まだ1か月だけど、毎日が本当に楽しいです。<br />
-            これからも、たくさんの思い出を一緒に作っていきたいです。<br /><br />
+            いつもそばにいてくれてありがとう。<br /><br />
+            これからも、たくさんの思い出を一緒に作っていきたい。<br /><br />
             誕生日、おめでとう。<br />
             これからもよろしくね。
           </p>
           <p class="message-signature">もとき より</p>
         </div>
       </section>
-
-      <!-- スライドショー -->
-      <section id="slideshow" class="fade-in-section">
-        <h2 class="section-title">これからも、よろしくね</h2>
-
-        <div class="slideshow-container">
-          <img
-            src="images/slide1.jpg"
-            alt="思い出の写真1"
-            class="slide active"
-          />
-          <img src="images/slide2.jpg" alt="思い出の写真2" class="slide" />
-          <img src="images/slide3.jpg" alt="思い出の写真3" class="slide" />
-        </div>
-
-        <div class="slideshow-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </section>
-    </div>
 
     <!-- 画像拡大表示用モーダル -->
     <div id="image-modal">
