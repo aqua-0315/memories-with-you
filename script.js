@@ -140,7 +140,7 @@ const todayDay = new Date().getDate(); // 日（1〜31）
 
 // 彼女の誕生日を設定（月・日）
 const birthdayMonth = 7; // ← 誕生日の月に変更
-const birthdayDay = 5; // ← 誕生日の日に変更
+const birthdayDay = 12; // ← 誕生日の日に変更
 
 if (todayMonth === birthdayMonth && todayDay === birthdayDay) {
   // 誕生日の場合：ローディング画面を表示
