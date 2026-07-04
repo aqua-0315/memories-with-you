@@ -46,10 +46,50 @@ function getDaysDiff(startDate, endDate) {
 document.getElementById("days-since-met").textContent = getDaysDiff(metDate, today);
 document.getElementById("days-since-dating").textContent = getDaysDiff(datingDate, today);
 
+// ===== ギャラリースライダー =====
+const gallerySliders = document.querySelectorAll(".gallery-slider");
+
+gallerySliders.forEach((slider) => {
+  const slides = slider.querySelectorAll(".gallery-slide");
+  const dots = slider.querySelectorAll(".gallery-dot");
+  const arrowLeft = slider.querySelector(".gallery-arrow-left");
+  const arrowRight = slider.querySelector(".gallery-arrow-right");
+  let current = 0;
+
+  // 写真が1枚の場合は処理不要
+  if (slides.length <= 1) return;
+
+  function showSlide(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    current = index;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  arrowLeft.addEventListener("click", () => showSlide(current - 1));
+  arrowRight.addEventListener("click", () => showSlide(current + 1));
+});
+
 // ===== 画像拡大表示（モーダル） =====
-const galleryPhotos = document.querySelectorAll(".gallery-photo");
+const galleryPhotos = document.querySelectorAll(".gallery-slide");
 const imageModal = document.getElementById("image-modal");
 const modalImage = document.getElementById("modal-image");
+
+galleryPhotos.forEach((photo) => {
+  photo.addEventListener("click", () => {
+    modalImage.src = photo.src;
+    imageModal.classList.add("active");
+  });
+});
+
+imageModal.addEventListener("click", () => {
+  imageModal.classList.remove("active");
+});
 
 // 各ギャラリー写真にクリックイベントを設定
 galleryPhotos.forEach((photo) => {

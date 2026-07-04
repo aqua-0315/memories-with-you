@@ -55,34 +55,43 @@
         </div>
       </section>
 
-      <!-- 思い出ギャラリー -->
-      <section id="gallery" class="fade-in-section">
-        <h2 class="section-title">思い出ギャラリー</h2>
+<!-- 思い出ギャラリー -->
+    <section id="gallery">
+      <h2 class="section-title">思い出ギャラリー</h2>
 
-        <div class="gallery-grid">
-          <div class="gallery-card">
-            <img
-              src="images/memory1.JPG"
-              alt="思い出の写真1"
-              class="gallery-photo"
-            />
-            <p class="gallery-card-title">初めて行った場所</p>
-            <p class="gallery-card-comment">この日はすごく楽しかったね</p>
-            <p class="gallery-card-date">2026.05.24</p>
-          </div>
+      <div class="gallery-grid">
 
-          <div class="gallery-card">
-            <img
-              src="images/memory2.JPG"
-              alt="思い出の写真2"
-              class="gallery-photo"
-            />
-            <p class="gallery-card-title">2回目のデート</p>
-            <p class="gallery-card-comment">天気が良くて気持ちよかったね</p>
-            <p class="gallery-card-date">2026.05.31</p>
+        <!-- カード1：写真2枚 -->
+        <div class="gallery-card">
+          <p class="gallery-card-date">2026.05.24</p>
+          <p class="gallery-card-title">初めて行った場所</p>
+          <p class="gallery-card-comment">この日はすごく楽しかったね</p>
+
+          <div class="gallery-slider">
+            <img src="images/day1-1.jpg" alt="1日目の写真1" class="gallery-slide active">
+            <img src="images/day1-2.jpg" alt="1日目の写真2" class="gallery-slide">
+            <button class="gallery-arrow gallery-arrow-left">&#10094;</button>
+            <button class="gallery-arrow gallery-arrow-right">&#10095;</button>
+            <div class="gallery-dots">
+              <span class="gallery-dot active"></span>
+              <span class="gallery-dot"></span>
+            </div>
           </div>
         </div>
-      </section>
+
+        <!-- カード2：写真1枚 -->
+        <div class="gallery-card">
+          <p class="gallery-card-date">2026.06.06</p>
+          <p class="gallery-card-title">2回目のデート</p>
+          <p class="gallery-card-comment">天気が良くて気持ちよかったね</p>
+
+          <div class="gallery-slider">
+            <img src="images/day2-1.jpg" alt="2日目の写真1" class="gallery-slide active">
+          </div>
+        </div>
+
+      </div>
+    </section>
 
       <!-- 思い出タイムライン -->
       <section id="timeline" class="fade-in-section">
