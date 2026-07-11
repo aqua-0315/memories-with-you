@@ -96,19 +96,6 @@ imageModal.addEventListener("click", () => {
   imageModal.classList.remove("active");
 });
 
-// 各ギャラリー写真にクリックイベントを設定
-galleryPhotos.forEach((photo) => {
-  photo.addEventListener("click", () => {
-    modalImage.src = photo.src; // タップした写真の画像をモーダルにセット
-    imageModal.classList.add("active"); // モーダルを表示
-  });
-});
-
-// モーダルをタップしたら閉じる
-imageModal.addEventListener("click", () => {
-  imageModal.classList.remove("active");
-});
-
 // ===== スクロールアニメーション =====
 const fadeSections = document.querySelectorAll(".fade-in-section");
 
